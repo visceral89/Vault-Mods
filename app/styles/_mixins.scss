@@ -1,0 +1,5 @@
+@import "variables";
+
+@mixin div-padding {
+	padding: $font-size-xxl $font-size-xl;
+}

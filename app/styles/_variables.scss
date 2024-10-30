@@ -1,0 +1,13 @@
+// A collection of scss variables
+
+@import "colors";
+@import "fonts";
+@import "paddings";
+@import "breakpoints";
+
+// Sizes
+$font-size-base: 16px; // 1 rem
+$font-size-sm: 0.5rem; // 8px
+$font-size-md: 1.5rem // 24px
+$font-size-xl: 4rem; // 64px
+$font-size-xxl: 6rem; // 96px rem
