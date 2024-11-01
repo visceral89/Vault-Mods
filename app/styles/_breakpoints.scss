@@ -7,6 +7,8 @@ $breakpoints: (
 	"xl": 1200px,
 );
 
+
+// Extra small breakpoint, not sure if this will be needed but in case of anything breaking < 360px.
 @mixin xs {
 	@media (max-width: map-get($breakpoints,"sm")) {
 		@content;
@@ -36,7 +38,7 @@ $breakpoints: (
 	}
 }
 
-// Anything above 
+// Anything above
 
 @mixin xl {
 	@media (min-width: map-get($breakpoints, "xl")) {
