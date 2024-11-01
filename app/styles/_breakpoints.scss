@@ -13,23 +13,30 @@ $breakpoints: (
 	}
 }
 
+// Breakpoint for most Mobile Devices, from 360px up to 500px.
+
 @mixin sm {
 	@media (min-width: map-get($breakpoints, "sm")) {
 		@content;
 	}
 }
 
+// Breakpoint for Tablet devices up to Laptop, from 500px up to 1024.
 @mixin md {
 	@media (min-width: map-get($breakpoints, "md")) {
 		@content;
 	}
 }
 
+// Breakpoint for Laptops, from 1024px to minimal desktop resolution.
+
 @mixin l {
 	@media (min-width: map-get($breakpoints, "l")) {
 		@content;
 	}
 }
+
+// Anything above 
 
 @mixin xl {
 	@media (min-width: map-get($breakpoints, "xl")) {
