@@ -8,7 +8,7 @@ $breakpoints: (
 	//360px
 	"md": 32rem,
 	// 512px
-	"l": 64rem,
+	"lg": 64rem,
 	// 1024px
 	"xl": 75rem,
 	// 1200px
@@ -39,7 +39,7 @@ $breakpoints: (
 // Breakpoint for Laptops, from 1024px to minimal desktop resolution.
 
 @mixin l {
-	@media (min-width: map-get($breakpoints, "l")) {
+	@media (min-width: map-get($breakpoints, "lg")) {
 		@content;
 	}
 }
