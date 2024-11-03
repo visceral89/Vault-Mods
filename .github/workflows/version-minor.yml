@@ -1,0 +1,33 @@
+# Getting ready to test. When pull into staging version: minor
+name: Minor version on PR merge from dev to staging
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - staging
+
+jobs:
+  bump-minor-version:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Bump minor version
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          npm version minor
+          git push origin staging --follow-tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

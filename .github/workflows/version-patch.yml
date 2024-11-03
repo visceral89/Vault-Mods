@@ -1,0 +1,31 @@
+# Runs on every push to "dev, increment patch number"
+name: Patch version on push to dev
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  bump-patch-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Bump patch version
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          npm version patch
+          git push origin dev --follow-tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
