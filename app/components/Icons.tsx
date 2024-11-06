@@ -28,3 +28,5 @@ export const IconHamburgerMenu = () => {
 		</div>
 	);
 };
+
+// Fråga Magnus eller Jon ifall man kan på snyggare sätt ändra FILL på svg'n
