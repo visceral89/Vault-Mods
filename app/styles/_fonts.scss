@@ -1,28 +1,28 @@
 @import "variables";
 @import "colors";
 
-.heading1 {
+@mixin heading1 {
 	font-size: $font-size-xl;
 	font-weight: 900;
 	line-height: 1.2;
 	color: $text-color;
 }
 
-.subheading {
+@mixin subheading {
 	font-size: $font-size-md;
 	font-weight: 700;
 	line-height: 1.65;
 	color: $text-color;
 }
 
-.paragraph {
+@mixin paragraph {
 	font-size: $font-size-base;
 	font-weight: 500;
 	line-height: 1.2;
 	color: $font-paragraph-color;
 }
 
-.paragraph-alt {
+@mixin paragraph-alt {
 	font-size: $font-size-base;
 	font-weight: 500;
 	line-height: 1.2;

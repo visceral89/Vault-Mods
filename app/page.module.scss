@@ -1,0 +1,33 @@
+@import "./styles/mixins";
+@import "./styles/variables";
+@import "./styles/fonts";
+
+.divpadding {
+	display: flex;
+	padding: $font-size-xxl $font-size-xl;
+}
+
+.textContainer {
+	display: flex;
+	flex-direction: column;
+	gap: $font-size-md;
+	h1 {
+		@include heading1;
+	}
+	.subheading {
+		@include subheading;
+	}
+
+	p {
+		@include paragraph;
+	}
+}
+
+.buttonContainer {
+	display: flex;
+	height: 100%;
+	gap: $font-size-md;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: flex-start;
+}

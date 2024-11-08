@@ -9,6 +9,7 @@ Little to no files will be initially stored on the site and mods will be distrib
 ---
 
 ## Features
+
 - Distributed via BitTorrent to reduce storage costs and improve availability
 - Community-driven modding platform
 - Freedom-focused with minimal moderation
@@ -42,7 +43,7 @@ Little to no files will be initially stored on the site and mods will be distrib
 
 ### Upcoming Features
 
--
+-https://www.framer.com/motion/examples/#scroll-triggered-animations
 
 ---
 
