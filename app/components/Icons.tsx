@@ -5,7 +5,7 @@ export const IconHamburgerMenu = () => {
 	const [isHover, setIsHover] = useState(false);
 
 	return (
-		<div onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
+		<div className={styles.hamburgerIcon} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
 			{isHover ? (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'

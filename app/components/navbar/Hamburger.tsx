@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode, useState } from "react";
 import styles from "./Hamburger.module.scss";
 import { IconHamburgerMenu } from "../Icons";

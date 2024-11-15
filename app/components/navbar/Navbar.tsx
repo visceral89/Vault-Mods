@@ -1,5 +1,6 @@
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
+import Hamburger from "./Hamburger";
 
 export default function Navbar() {
 	return (
@@ -17,6 +18,11 @@ export default function Navbar() {
 				<Link href={"/"}>Notifications</Link>
 				<Link href={"/"}>Account</Link>
 			</div>
+			<Hamburger>
+				<Link href={"/"}>Games {/* ArrowDown */}</Link>
+				<Link href={"/"}>Mods {/* ArrowDown */}</Link>
+				<Link href={"/"}>Support {/* ArrowDown */}</Link>
+			</Hamburger>
 		</nav>
 	);
 }
