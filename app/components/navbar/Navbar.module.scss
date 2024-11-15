@@ -1,5 +1,29 @@
 @import "../../styles/breakpoints";
+@import "../../styles/variables";
 
 .navbar {
 	display: flex;
+	justify-content: center;
+	gap: $font-size-base;
+	align-items: center;
+
+	//
+	min-height: $font-size-l;
+	padding: 1.25rem 2rem;
+}
+
+.navbarDropDownLinks {
+	display: none;
+	gap: $font-size-base;
+}
+
+.navbarUserLinks {
+	display: flex;
+	gap: $font-size-base;
+}
+
+@include l {
+	.navbarDropDownLinks {
+		display: block;
+	}
 }

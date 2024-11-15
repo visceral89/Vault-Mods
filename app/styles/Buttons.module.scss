@@ -1,0 +1,36 @@
+@import "variables";
+@import "colors";
+
+.ctaButton {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	//
+	padding: 0.75rem $font-size-l;
+	border-radius: $font-size-base;
+	//
+	color: $bg-color-alt;
+	background-color: $accent-color;
+	//
+	font-weight: 500;
+	font-size: $font-size-base;
+	//
+	transition: background-color 0.15s linear;
+	&:hover {
+		background-color: $accent-color-hover;
+	}
+}
+
+.button {
+	@extend .ctaButton;
+	border: 2px solid $panel-color;
+	background-color: transparent;
+	color: $text-color;
+	transition: border 0.15s linear;
+	&:hover {
+		background-color: $panel-color-hover;
+		border: 2px solid $text-color;
+	}
+}
